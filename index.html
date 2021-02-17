@@ -26,7 +26,7 @@
             var quant=document.getElementById("num1").value;
             var price=document.getElementById("num2").value;
             var tax = 200;
-            var sum=parseFloat(quant)+parseFloat(price);
+            var sum=parseFloat(quant)*parseFloat(price);
             var result = sum +sum/tax;
              result_ready = result.toFixed(2);
             if(!isNaN(sum)){
