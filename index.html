@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Price With Tax</title>
+    <link rel="stylesheet" href="style.css">
+    
+
+</head>
+<body style="background-color:rgb(145, 197, 228);">
+    <br>
+    <br>
+    <center><p1> Number of crypto&nbsp;&nbsp;</p1><input id="num1" placeholder="Enter amount..."></center>
+    <br><br><br>
+    <center><p1> Trading price &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p1><input id="num2" placeholder="Enter trading price..."></center>
+    <br>
+    <center> <h1 id="answer"></h1></center>
+    <br> 
+    <center><button onclick="sum()" in="btn">Calculate price</button></center>
+    <p2>Site made by HristoAngelov</p2><br>
+    <p3>Prices are calculated for coinbase(With 0.50% tax)</p3>
+    <script>
+        function sum(){
+            var quant=document.getElementById("num1").value;
+            var price=document.getElementById("num2").value;
+            var tax = 200;
+            var sum=parseFloat(quant)+parseFloat(price);
+            var result = sum +sum/tax;
+             result_ready = result.toFixed(2);
+            if(!isNaN(sum)){
+                document.getElementById("answer").innerHTML="The price will be :"+ result_ready ;
+            }
+        }
+    </script>
+</body>
+</html>
